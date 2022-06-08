@@ -1,0 +1,16 @@
+.form__field {
+    margin: 6px auto;
+    width: 100%;
+}
+
+.image__label {
+    margin-bottom: 10px
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    width: 40%;    
+}

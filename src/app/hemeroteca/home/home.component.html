@@ -1,0 +1,26 @@
+<div class="hemerotecas__container">
+  <mat-card *ngFor="let hemeroteca of hemerotecas" class="hemeroteca__card">
+    <mat-card-title class="card__title">{{ hemeroteca.nombre }}</mat-card-title>
+    <img
+      mat-card-image
+      src="{{ hemeroteca.imagen }}"
+      alt="{{ hemeroteca.nombre }}"
+      class="card__img"
+    />
+    <mat-card-content class="card__content">
+      <p>{{ hemeroteca.dias_habiles }}</p>
+      <p>{{ hemeroteca.horario_apertura }}</p>
+      <p>{{ hemeroteca.nombre_ciudad }}</p>
+      <p>{{ hemeroteca.direccion }}</p>
+    </mat-card-content>
+    <mat-card-actions class="card__actions">
+      <button
+        mat-stroked-button
+        color="primary"
+        [routerLink]="['/ver-publicaciones', hemeroteca.id_hemeroteca]"
+      >
+        Ver publicaciones
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

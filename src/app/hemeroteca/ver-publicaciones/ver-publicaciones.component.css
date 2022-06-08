@@ -1,0 +1,39 @@
+.publicaciones__container {
+    min-height: 450px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+.card__title {
+    height: 60px;
+    overflow: hidden
+}
+
+.publicaciones__card {
+    width: 300px;
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    padding-bottom: 50px;
+    box-shadow: 11px 8px 27px 0px rgba(255, 204, 143, 0.75);
+    -webkit-box-shadow: 11px 8px 27px 0px rgba(255, 204, 143, 0.75);
+    -moz-box-shadow: 11px 8px 27px 0px rgba(255, 204, 143, 0.75);
+}
+
+.flex__con {
+    text-align: center;
+}
+
+img {
+    margin: 20px auto;
+    max-height: 300px;
+    width: auto;
+}
+
+.card__description {
+    height: 150px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <span [routerLink]="['/home']" class="pointer">Hemeroteca-Catalogo</span>
+  <span class="example-spacer"></span>
+  <button mat-stroked-button color="primary" [routerLink]="['/']">
+    Inicio
+  </button>
+  <button mat-stroked-button color="primary" [matMenuTriggerFor]="menu" *ngIf="isAdmin">
+    Gestionar
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/admin/administradores']">Administradores</button>
+    <button mat-menu-item [routerLink]="['/admin/publicaciones']">Publicaciones</button>
+  </mat-menu>
+  <button mat-stroked-button color="primary" *ngIf="isAdmin" (click)="logout()">
+    Cerrar Sesión
+  </button>
+</mat-toolbar>

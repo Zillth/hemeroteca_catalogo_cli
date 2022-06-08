@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+}
+
+.table__container {
+    max-width: 1400px;
+    margin: 40px auto;
+    min-height: 500px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    max-height: 120px;
+}
+
+.add__container {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+}
+
+.cut__overflow {
+    max-width: 250px;
+    text-align: justify;
+    padding-right: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

@@ -1,0 +1,39 @@
+.hemerotecas__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 500px;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+.hemeroteca__card {
+    width: 400px;
+    background-color: #FFDAAF;
+}
+
+.card__title {
+    height: 45px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.card__img {
+    height: 250px;
+}
+
+.card__content {
+    height: 120px;
+}
+
+.card__actions {
+    text-align: center;
+}
+
+button {
+    width: 300px;
+}

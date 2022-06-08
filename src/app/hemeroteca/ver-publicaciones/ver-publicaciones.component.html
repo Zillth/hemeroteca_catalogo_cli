@@ -1,0 +1,27 @@
+<div class="publicaciones__container">
+  <mat-card
+    *ngFor="let publicacion of publicaciones"
+    class="publicaciones__card"
+  >
+    <div class="flex__con">
+      <mat-card-title class="card__title">{{
+        publicacion.nombre
+      }}</mat-card-title>
+      <div class="card__img">
+        <img
+          mat-card-image
+          src="{{ publicacion.imagen }}"
+          alt="{{ publicacion.nombre }}"
+        />
+      </div>
+    </div>
+    <mat-card-content class="card__content">
+      <div class="card__description">
+        <p>{{ publicacion.descripcion }}</p>
+      </div>
+      <p>Autor: {{ publicacion.autor }}</p>
+      <p>Categoria: {{ publicacion.categoria }}</p>
+      <p>Publicado: {{ publicacion.fecha_publicacion }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
