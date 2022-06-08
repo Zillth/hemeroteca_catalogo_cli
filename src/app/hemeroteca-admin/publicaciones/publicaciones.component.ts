@@ -37,7 +37,7 @@ export class PublicacionesComponent implements AfterViewInit, OnInit {
   ];
   dataSource = new MatTableDataSource<Publicacion>();
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator | null;
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator | null;
 
   constructor(
     private adminService: AdminService,
@@ -54,6 +54,7 @@ export class PublicacionesComponent implements AfterViewInit, OnInit {
     this.adminService.getPublicaciones().subscribe((res: any) => {
       if (Array.isArray(res)) {
         this.dataSource = new MatTableDataSource<Publicacion>([...res]);
+        this.dataSource.paginator = this.paginator;
       }
     });
   }
@@ -128,14 +129,10 @@ export class PublicacionesComponent implements AfterViewInit, OnInit {
               );
               this.getPublicaciones();
             } else {
-              this._snackBar.open(
-                'Algo ha ocurrido, intentelo más tarde',
-                '',
-                {
-                  duration: 3000,
-                  panelClass: ['mat-toolbar', 'mat-warn'],
-                }
-              );
+              this._snackBar.open('Algo ha ocurrido, intentelo más tarde', '', {
+                duration: 3000,
+                panelClass: ['mat-toolbar', 'mat-warn'],
+              });
             }
           });
         }
